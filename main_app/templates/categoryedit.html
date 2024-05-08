@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'sty.css' %}">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrow-long-up.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/collage.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/profile.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/copy.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/designmodo.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/clipboard.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/globe-alt.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/bell.css' rel='stylesheet'>
+</head>
+<body style="background-color: rgb(73, 66, 73);">
+    <div class="d1">
+        <h1 class="ct">CREATIVE TIM</h1><br>
+        <i class="gg-collage"></i>
+        <a class="dash" href="{% url 'border' %}">Dashboard</a><br><br>
+        <i class="gg-collage"></i>
+        <a class="dash" href="{% url 'customer' %}">Customer Table</a><br><br>
+        <i class="gg-profile"></i>
+        <a class="user" href="{% url 'banner' %}">Banner Table</a><br><br>
+        <i class="gg-clipboard"></i>
+        <a class="tl" href="{% url 'payment' %}">Payment Table</a><br><br>
+        <i class="gg-copy"></i>
+        <a class="typo" href="{% url 'delifee' %}">Delifee Table</a><br><br>
+        <i class="gg-designmodo"></i>
+        <a class="ico" href="{% url 'region' %}">Region Table</a><br><br>
+        <i class="gg-globe-alt"></i>
+        <a class="ma" href="{% url 'product' %}">Product Table</a><br><br>
+        <i class="gg-bell"></i>
+        <a class="noti" href="{% url 'information' %}">Information Table</a><br><br>
+        <i class="gg-bell"></i>
+        <a style="background-color: blueviolet;" class="noti" href="{% url 'cartegory' %}">Category Table</a><br><br>
+        <i class="gg-bell"></i>
+        <a class="noti" href="{% url 'brand' %}">Brand Table</a><br><br>
+        <i class="gg-bell"></i>
+        <a class="noti" href="{% url 'order' %}">Order Table</a><br><br>
+    </div>
+    <h1 class="db">Category Table</h1>
+    <form action="#">
+        <input class="sb" type="text" placeholder="Search.." name="search">
+        <input class="sbe" type="submit" value="Search">
+    </form>
+    <p class="no">5</p>
+    <i id ="collage" class="gg-collage"></i>
+    <i id ="bell" class="gg-bell"></i>
+    <i id ="profile" class="gg-profile"></i>
+    <div class="table">
+        <form action="{% url 'edit_categorytable' categorytable.id %}" method="post">
+            {% csrf_token %}
+            <br><br><br>
+            <br><br><br>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" class="name" value="{{ categorytable.name }}">
+            <br><br><br>
+            <div class="left">
+                <br><br><br><br><br>
+                <label for="createdat">Phone:</label>
+                <input type="text" name="createdat" id="createdat" class="createdat" value="{{ categorytable.createdat }}">
+                <br><br><br>
+                <label for="updatedat">Created at:</label>
+                <input type="text" name="updatedat" id="updatedat" class="updatedat" value="{{ categorytable.updatedat }}">
+                <br><br><br>
+            </div>
+            <input class="sg" type="submit" value="Save & Generate">
+        </form>
+        <p class="end">Copyright all right reserved by Chan</p>
+    </div>
+</body>
+</html>

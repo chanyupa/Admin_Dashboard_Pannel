@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1> Customer Data Saved successfully</h1>
+    <form action="{% url 'retrieve_customertable'%}">
+        {% csrf_token %}
+        {% for i in customer %}
+            <ul>
+                <li>{{ i.id }}</li>
+                <li>{{ i.name }}</li>
+                <li>{{ i.email }}</li>
+                <li>{{ i.phone }}</li>
+                <li>{{ i.createdat }}</li>
+                <li><a href="{% url 'showedit_customertable' i.id %}">edit data</a></li>
+                <li><a href="{% url 'delete_data' i.id %}">delete data</a></li>
+            </ul>
+        {% endfor %}
+        <input type="submit" value="Show Data">
+    </form>
+    <h1>Banner Data Saved successfully</h1>
+    <form action="{% url 'retrieve_bannertable'%}">
+        {% csrf_token %}
+        {% for i in banner %}
+            <ul>
+                <li>{{ i.id }}</li>
+                <li>{{ i.name }}</li>
+                <li>{{ i.createdat }}</li>
+                <li>{{ i.updatedat }}</li>
+                <li><a href="{% url 'showedit_bannertable' i.id %}">edit data</a></li>
+                <li><a href="{% url 'delete_banner' i.id %}">delete data</a></li>
+            </ul>
+        {% endfor %}
+        <input type="submit" value="Show Data">
+    </form>
+    <h1>Payment Data Saved successfully</h1>
+    <form action="{% url 'retrieve_paymenttable'%}">
+        {% csrf_token %}
+        {% for i in payment %}
+            <ul>
+                <li>{{ i.id }}</li>
+                <li>{{ i.paymenttype }}</li>
+                <li>{{ i.phonenumber }}</li>
+                <li>{{ i.createdat }}</li>
+                <li><a href="{% url 'showedit_paymenttable' i.id %}">edit data</a></li>
+                <li><a href="{% url 'delete_payment' i.id %}">delete data</a></li>
+            </ul>
+        {% endfor %}
+        <input type="submit" value="Show Data">
+    </form>
+    <h1>Delifee Data Saved successfully</h1>
+    <form action="{% url 'retrieve_delifeetable'%}">
+        {% csrf_token %}
+        {% for i in delifee %}
+            <ul>
+                <li>{{ i.id }}</li>
+                <li>{{ i.regionname }}</li>
+                <li>{{ i.township }}</li>
+                <li>{{ i.deliveryfees }}</li>
+                <li>{{ i.status }}</li>
+                <li>{{ i.createdat }}</li>
+                <li>{{ i.updatedat }}</li>
+                <li><a href="{% url 'showedit_delifeetable' i.id %}">edit data</a></li>
+                <li><a href="{% url 'delete_delifee' i.id %}">delete data</a></li>
+            </ul>
+        {% endfor %}
+        <input type="submit" value="Show Data">
+    </form>
+    <h1>Region Data Saved successfully</h1>
+    <form action="{% url 'retrieve_regiontable'%}">
+        {% csrf_token %}
+        {% for i in region %}
+            <ul>
+                <li>{{ i.id }}</li>
+                <li>{{ i.regionname }}</li>
+                <li>{{ i.createdat }}</li>
+                <li>{{ i.updatedat }}</li>
+                <li><a href="{% url 'showedit_regiontable' i.id %}">edit data</a></li>
+                <li><a href="{% url 'delete_region' i.id %}">delete data</a></li>
+            </ul>
+        {% endfor %}
+        <input type="submit" value="Show Data">
+    </form>
+    <h1>Product Data Saved successfully</h1>
+    <form action="{% url 'retrieve_producttable'%}">
+        {% csrf_token %}
+        {% for i in product %}
+            <ul>
+                <li>{{ i.id }}</li>
+                <li>{{ i.name }}</li>
+                <li>{{ i.price }}</li>
+                <li>{{ i.stock }}</li>
+                <li>{{ i.category }}</li>
+                <li>{{ i.brand }}</li>
+                <li>{{ i.createdat }}</li>
+                <li><a href="{% url 'showedit_producttable' i.id %}">edit data</a></li>
+                <li><a href="{% url 'delete_product' i.id %}">delete data</a></li>
+            </ul>
+        {% endfor %}
+        <input type="submit" value="Show Data">
+    </form>
+    <h1>Information Data Saved successfully</h1>
+    <form action="{% url 'retrieve_informationtable' %}">
+        {% csrf_token %}
+        {% for i in information %}
+            <ul>
+                <li>{{ i.id }}</li>
+                <li>{{ i.content }}</li>
+                <li>{{ i.createdat }}</li>
+                <li>{{ i.updatedat }}</li>
+                <li><a href="{% url 'showedit_informationtable' i.id %}">edit data</a></li>
+                <li><a href="{% url 'delete_information' i.id %}">delete data</a></li>
+            </ul>
+        {% endfor %}
+        <input type="submit" value="Show Data">
+    </form>
+    <h1>Category Data Saved successfully</h1>
+    <form action="{% url 'retrieve_categorytable'%}">
+        {% csrf_token %}
+        {% for i in category %}
+            <ul>
+                <li>{{ i.id }}</li>
+                <li>{{ i.name }}</li>
+                <li>{{ i.createdat }}</li>
+                <li>{{ i.updatedat }}</li>
+                <li><a href="{% url 'showedit_categorytable' i.id %}">edit data</a></li>
+                <li><a href="{% url 'delete_category' i.id %}">delete data</a></li>
+            </ul>
+        {% endfor %}
+        <input type="submit" value="Show Data">
+    </form>
+    <h1>Brand Data Saved successfully</h1>
+    <form action="{% url 'retrieve_brandtable'%}">
+        {% csrf_token %}
+        {% for i in brand %}
+            <ul>
+                <li>{{ i.id }}</li>
+                <li>{{ i.categoryname }}</li>
+                <li>{{ i.brandname }}</li>
+                <li>{{ i.createdat }}</li>
+                <li>{{ i.updatedat }}</li>
+                <li><a href="{% url 'showedit_brandtable' i.id %}">edit data</a></li>
+                <li><a href="{% url 'delete_brand' i.id %}">delete data</a></li>
+            </ul>
+        {% endfor %}
+        <input type="submit" value="Show Data">
+    </form>
+    <h1>Order Data Saved successfully</h1>
+    <form action="{% url 'retrieve_ordertable'%}">
+        {% csrf_token %}
+        {% for i in order %}
+            <ul>
+                <li>{{ i.orderid }}</li>
+                <li>{{ i.customer }}</li>
+                <li>{{ i.status }}</li>
+                <li>{{ i.orderdate }}</li>
+                <li><a href="{% url 'showedit_ordertable' i.orderid %}">edit data</a></li>
+                <li><a href="{% url 'delete_order' i.orderid %}">delete data</a></li>
+            </ul>
+        {% endfor %}
+        <input type="submit" value="Show Data">
+    </form>
+</body>
+</html>

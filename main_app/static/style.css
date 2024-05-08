@@ -1,0 +1,223 @@
+body{
+    background-color: #EBF336;
+    overflow-x: hidden;
+}
+.datapannel{
+    color: #8F920E;
+    position: relative;
+    left: 500px;
+    top: -10px;
+}
+.bod{
+    border: 1000px;
+    background: white;
+    width: 1369px;
+    height: 5200px;
+    position: absolute;
+    left: 0px;
+    top: 60px;
+}
+
+label{
+    position: absolute;
+    left: 50px;
+}
+input{
+    border-radius: 15px;
+    position: absolute;
+    left: 180px;
+}
+.dataentryp{
+    background: #98BFED;
+    width: 930px;
+    height: 280px;
+    position: absolute;
+    top: 60px;
+    left: 180px
+}
+
+.left{
+    position: relative;
+    top: -210px;
+    left: 500px;
+}
+
+.sg{
+    background-image: linear-gradient(#98BFED, #98BFED, pink,#E6D8F7);
+    width: 200px;
+    height: 30px;
+    font-size: 110%;
+    position: absolute;
+    left: 350px;
+    top: 310px;
+}
+
+p{
+    position: absolute;
+    top: 5225px;
+    left: 550px;
+    height: 50px;
+}
+
+.custom{
+    background: #98BFED;
+    width: 930px;
+    height: 280px;
+    position: absolute;
+    top: 530px;
+    left: 180px;
+}
+
+.custom .left{
+    position: relative;
+    top: -200px;
+}
+
+.banner{
+    background: #98BFED;
+    width: 930px;
+    height: 280px;
+    position: absolute;
+    top: 1000px;
+    left: 180px;
+}
+
+.bod div{
+    border-radius: 50px;
+}
+
+.payment{
+    background: #98BFED;
+    width: 930px;
+    height: 280px;
+    position: absolute;
+    top: 1500px;
+    left: 180px;
+}
+.cus{
+    position: relative;
+    top: 400px;
+    left: 520px;
+    color: #8F920E;
+}
+.ban{
+    position: relative;
+    top: 800px;
+    left: 540px;
+    color: #8F920E;
+}
+.pay{
+    position: relative;
+    top: 1250px;
+    left: 530px;
+    color: #8F920E;
+}
+.deli{
+    position: relative;
+    top: 1700px;
+    left: 530px;
+    color: #8F920E;
+}
+.delifee{
+    background: #98BFED;
+    width: 930px;
+    height: 280px;
+    position: absolute;
+    top: 2000px;
+    left: 180px;
+}
+.reg{
+    position: relative;
+    top: 2130px;
+    left: 530px;
+    color: #8F920E;
+}
+.region{
+    background: #98BFED;
+    width: 930px;
+    height: 280px;
+    position: absolute;
+    top: 2500px;
+    left: 180px;
+}
+
+.pro{
+    position: relative;
+    top: 2530px;
+    left: 530px;
+    color: #8F920E;
+}
+
+.product{
+    background: #98BFED;
+    width: 930px;
+    height: 280px;
+    position: absolute;
+    top: 2950px;
+    left: 180px;
+}
+
+.info{
+    position: relative;
+    top: 2930px;
+    left: 530px;
+    color: #8F920E;
+}
+
+.information{
+    background: #98BFED;
+    width: 930px;
+    height: 280px;
+    position: absolute;
+    top: 3400px;
+    left: 180px;
+}
+
+.cate{
+    position: relative;
+    top: 3320px;
+    left: 530px;
+    color: #8F920E;
+}
+
+.categor{
+    background: #98BFED;
+    width: 930px;
+    height: 280px;
+    position: absolute;
+    top: 3850px;
+    left: 180px;
+}
+
+.bran{
+    position: relative;
+    top: 3720px;
+    left: 530px;
+    color: #8F920E;
+}
+
+.brandt{
+    background: #98BFED;
+    width: 930px;
+    height: 280px;
+    position: absolute;
+    top: 4300px;
+    left: 180px;
+}
+
+.ord{
+    position: relative;
+    top: 4100px;
+    left: 530px;
+    color: #8F920E;
+}
+
+.order{
+    background: #98BFED;
+    width: 930px;
+    height: 280px;
+    position: absolute;
+    top: 4750px;
+    left: 180px;
+}
+
